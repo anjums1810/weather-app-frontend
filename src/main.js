@@ -1,4 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
+import apolloProvider from './apollo';
 
-createApp(App).mount('#app')
+//Vue.config.productionTip = true;
+
+new Vue({
+  apolloProvider,
+  render: h => h(App),
+}).$mount('#app');
